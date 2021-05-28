@@ -6,4 +6,6 @@ const server = http.createServer((req, res) => {
   fs.createReadStream('index.html').pipe(res)
 })
 
-server.listen(process.env.PORT || 3000)
+server.listen(3000, () => {
+  console.log(`Example app listening at http://localhost:${3000}`)
+})
